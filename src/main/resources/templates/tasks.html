@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Task listing</title>
+</head>
+<body>
+
+<h4>Tasks</h4>
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Due Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="task : ${tasks}">
+        <td th:text="*{task.title}"></td>
+        <td th:text="*{task.dueDate}"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>
